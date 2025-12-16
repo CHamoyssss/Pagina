@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHAMOYS SHOP - Pantalones Mujeres</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js" defer></script>
+  <script src="buscador.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body data-page="pantalonesmujeres">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="logo">CHAMOYS SHOP</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+
+      <li class="dropdown">
+        <a href="hombres.html">Hombres</a>
+        <ul class="submenu">
+          <li><a href="camisetashombres.html">Camisetas</a></li>
+          <li><a href="pantaloneshombres.html">Pantalones</a></li>
+          <li><a href="jeanshombres.html">Jeans</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="mujeres.html">Mujeres</a>
+        <ul class="submenu">
+          <li><a href="camisetasmujeres.html">Tops|Camisetas</a></li>
+          <li><a href="pantalonesmujeres.html">Pantalones</a></li>
+          <li><a href="jeansmujeres.html">Jeans</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Buscar ropa..." autocomplete="off" />
+      
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+
+    <div class="icono-carrito" id="iconoCarrito">
+      🛒 <span id="contadorCarrito">0</span>
+    </div>
+  </nav>
+
+  <!-- ===== CATÁLOGO DE PANTALONES MUJER ===== -->
+  <section class="productos fondo-mujeres">
+    <h2>Pantalones Mujer</h2>
+
+    <div class="catalogo-container">
+
+      <!-- PRODUCTO 1 -->
+      <div class="producto" onclick="mostrarProducto('Lebrel Legging Black','https://nude-project.com/cdn/shop/files/Lebrel_Legging_Black_1_700x.jpg?v=1756995733','https://nude-project.com/cdn/shop/files/Lebrel_Legging_Black_2_800x.jpg?v=1757318732',290)">
+        <img src="https://nude-project.com/cdn/shop/files/Lebrel_Legging_Black_1_700x.jpg?v=1756995733" alt="Lebrel Legging Black">
+        <p class="nombre">Lebrel Legging Black</p>
+        <p class="precio">Bs. 290</p>
+      </div>
+
+      <!-- PRODUCTO 2 -->
+      <div class="producto" onclick="mostrarProducto('Essentials Pant Brown','https://nude-project.com/cdn/shop/files/ESSENTIALS_PANT_BROWN_front_800x.jpg?v=1756739600','https://nude-project.com/cdn/shop/files/ESSENTIALS_PANT_BROWN_BACK_800x.jpg?v=1756739600',310)">
+        <img src="https://nude-project.com/cdn/shop/files/ESSENTIALS_PANT_BROWN_front_800x.jpg?v=1756739600" alt="Essentials Pant Brown">
+        <p class="nombre">Essentials Pant Brown</p>
+        <p class="precio">Bs. 310</p>
+      </div>
+
+      <!-- PRODUCTO 3 -->
+      <div class="producto" onclick="mostrarProducto('Essentials Sweatpants Grey','https://nude-project.com/cdn/shop/files/ESSENTIALS_SWEATPANTS_GREY_MELANGE_front_6c9d9430-f952-4404-be5b-2b10cd3d40b7_800x.jpg?v=1756309001','https://nude-project.com/cdn/shop/files/ESSENTIALS_SWEATPANTS_GREY_MELANGE_back_3f5234fa-ae16-4162-abea-4c0d94e874de_800x.jpg?v=1756309002',320)">
+        <img src="https://nude-project.com/cdn/shop/files/ESSENTIALS_SWEATPANTS_GREY_MELANGE_front_6c9d9430-f952-4404-be5b-2b10cd3d40b7_800x.jpg?v=1756309001" alt="Essentials Sweatpants Grey">
+        <p class="nombre">Essentials Sweatpants Grey</p>
+        <p class="precio">Bs. 320</p>
+      </div>
+
+      <!-- PRODUCTO 4 -->
+      <div class="producto" onclick="mostrarProducto('Essentials Sweatpants Black','https://nude-project.com/cdn/shop/files/ESSENTIALS_SWEATPANTS_BLACK_front_08f91886-0e8c-43fb-9e43-8a9bea8d0d73_800x.jpg?v=1756309008','https://nude-project.com/cdn/shop/files/ESSENTIALS_SWEATPANTS_BLACK_back_7318a746-fe39-493d-832b-ade3a93d063d_800x.jpg?v=1759500789',320)">
+        <img src="https://nude-project.com/cdn/shop/files/ESSENTIALS_SWEATPANTS_BLACK_front_08f91886-0e8c-43fb-9e43-8a9bea8d0d73_800x.jpg?v=1756309008" alt="Essentials Sweatpants Black">
+        <p class="nombre">Essentials Sweatpants Black</p>
+        <p class="precio">Bs. 320</p>
+      </div>
+
+      <!-- PRODUCTO 5 -->
+      <div class="producto" onclick="mostrarProducto('Soft Pants Grey','https://nude-project.com/cdn/shop/files/13_2a772821-901b-4c84-8616-9453f580b40a_800x.jpg?v=1757434141','https://nude-project.com/cdn/shop/files/14_eb00fad2-80aa-43cb-93d5-1686abe5fe83_800x.jpg?v=1759138581',300)">
+        <img src="https://nude-project.com/cdn/shop/files/13_2a772821-901b-4c84-8616-9453f580b40a_800x.jpg?v=1757434141" alt="Soft Pants Grey">
+        <p class="nombre">Soft Pants Grey</p>
+        <p class="precio">Bs. 300</p>
+      </div>
+
+      <!-- PRODUCTO 6 -->
+      <div class="producto" onclick="mostrarProducto('City Carpenter Long Pants','https://nude-project.com/cdn/shop/files/CITY_CARPENTER_LONG_PANTS_800x.jpg?v=1755776637','https://nude-project.com/cdn/shop/files/CITY_CARPENTER_LONG_PANTS_back_800x.jpg?v=1755776638',330)">
+        <img src="https://nude-project.com/cdn/shop/files/CITY_CARPENTER_LONG_PANTS_800x.jpg?v=1755776637" alt="City Carpenter Long Pants">
+        <p class="nombre">City Carpenter Long Pants</p>
+        <p class="precio">Bs. 330</p>
+      </div>
+
+      <!-- PRODUCTO 7 -->
+      <div class="producto" onclick="mostrarProducto('Carpenter Pants Single Knee Raw','https://nude-project.com/cdn/shop/files/CarpenterPantsSingleKneeRaw_front_2_800x.jpg?v=1755526667','https://nude-project.com/cdn/shop/files/CarpenterPantsSingleKneeRaw_back_2_800x.jpg?v=1755597807',340)">
+        <img src="https://nude-project.com/cdn/shop/files/CarpenterPantsSingleKneeRaw_front_2_800x.jpg?v=1755526667" alt="Carpenter Pants Single Knee Raw">
+        <p class="nombre">Carpenter Pants Single Knee Raw</p>
+        <p class="precio">Bs. 340</p>
+      </div>
+
+      <!-- PRODUCTO 8 -->
+      <div class="producto" onclick="mostrarProducto('Carpenter Pants Single Knee Brown','https://nude-project.com/cdn/shop/files/CarpenterPantsSingleKneeBrown_front_1_800x.jpg?v=1755525692','https://nude-project.com/cdn/shop/files/CarpenterPantsSingleKneeBrown_back_800x.jpg?v=1755597827',340)">
+        <img src="https://nude-project.com/cdn/shop/files/CarpenterPantsSingleKneeBrown_front_1_800x.jpg?v=1755525692" alt="Carpenter Pants Single Knee Brown">
+        <p class="nombre">Carpenter Pants Single Knee Brown</p>
+        <p class="precio">Bs. 340</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== MODAL Y CARRITO ===== -->
+  <div id="modalProducto" class="modal">
+    <div class="modal-content">
+      <span class="cerrar">&times;</span>
+      <div class="modal-body">
+        <div class="modal-imagen">
+          <img id="modalImg" src="" alt="Producto (frontal)" class="imagen-frontal">
+          <img id="modalImgBack" src="" alt="Producto (trasera)" class="imagen-trasera">
+        </div>
+
+        <div class="modal-info">
+          <h2 id="modalNombre"></h2>
+          <p class="precio" id="modalPrecio"></p>
+
+          <label for="talla" class="talla-label">Selecciona tu talla:</label>
+          <select id="talla" class="talla-select">
+            <option value="">-- Selecciona --</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+
+          <label for="cantidad" class="cantidad-label">Cantidad:</label>
+          <input type="number" id="cantidad" class="cantidad-input" min="1" value="1">
+
+          <button class="btn-carrito">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlayCarrito" class="overlay-carrito"></div>
+
+  <div id="carritoPanel" class="carrito-panel">
+    <div class="carrito-header">
+      <h2>🛒 Tu Carrito</h2>
+      <span id="cerrarCarrito" class="cerrar-carrito">&times;</span>
+    </div>
+    <div id="carritoItems" class="carrito-items">
+      <p class="carrito-vacio">Tu carrito está vacío.</p>
+    </div>
+    <div class="carrito-footer">
+      <p class="total">Total: <span id="carritoTotal">Bs. 0</span></p>
+      <button id="btnPagar" class="btn-pagar">Ir a pagar</button>
+    </div>
+  </div>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-contenedor">
+
+    <!-- Información de contacto -->
+    <div class="footer-contacto">
+      <h3>📍 Contáctanos</h3>
+      <p><strong>Dirección:</strong> Calle Moda 123, Santa Cruz - Bolivia</p>
+      <p><strong>Teléfono:</strong> +591 700-12345</p>
+      <p><strong>Correo:</strong> contacto@chamoys.shop</p>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="footer-redes">
+      <h3>🌐 Síguenos</h3>
+      <div class="redes-iconos">
+        <a href="https://www.instagram.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046127.png" alt="TikTok">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footer-derechos">
+    &copy; 2025 CHAMOYS SHOP - Todos los derechos reservados
+  </p>
+</footer>
+</body>
+</html>

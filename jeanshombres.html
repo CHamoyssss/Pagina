@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHAMOYS SHOP - Jeans Hombre</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js" defer></script>
+  <script src="buscador.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body data-page="jeans">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="logo">CHAMOYS SHOP</div>
+
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+
+      <li class="dropdown">
+        <a href="hombres.html">Hombres</a>
+        <ul class="submenu">
+          <li><a href="camisetashombres.html">Camisetas</a></li>
+          <li><a href="pantaloneshombres.html">Pantalones</a></li>
+          <li><a href="jeanshombres.html">Jeans</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="mujeres.html">Mujeres</a>
+        <ul class="submenu">
+          <li><a href="camisetasmujeres.html">Tops|Camisetas</a></li>
+          <li><a href="pantalonesmujeres.html">Pantalones</a></li>
+          <li><a href="jeansmujeres.html">Jeans</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Buscar ropa..." autocomplete="off" />
+    
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+
+    <!-- 🔹 ÍCONO DEL CARRITO -->
+    <div class="icono-carrito" id="iconoCarrito">
+      🛒 <span id="contadorCarrito">0</span>
+    </div>
+  </nav>
+
+  <!-- ===== CATÁLOGO JEANS HOMBRE ===== -->
+  <section class="productos">
+    <h2>Jeans para Hombre</h2>
+
+    <div class="catalogo">
+      
+      <!-- Producto 1 -->
+      <div class="producto" onclick="mostrarProducto('Basic Jeans Light Wash', 'https://nude-project.com/cdn/shop/files/Basic_Jeans_Light_Wash_front_800x.jpg?v=1756992680', 'https://nude-project.com/cdn/shop/files/Basic_Jeans_Light_Wash_back_800x.jpg?v=1758100287', 420)">
+        <img src="https://nude-project.com/cdn/shop/files/Basic_Jeans_Light_Wash_front_800x.jpg?v=1756992680" alt="Basic Jeans Light Wash">
+        <h3>Basic Jeans Light Wash</h3>
+        <p>Bs. 420</p>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="producto" onclick="mostrarProducto('Basic Jeans Metal Wash', 'https://nude-project.com/cdn/shop/files/Basic_Jeans_Metal_Wash_front_800x.jpg?v=1756993265', 'https://nude-project.com/cdn/shop/files/Basic_Jeans_Metal_Wash-back_800x.jpg?v=1758188568', 430)">
+        <img src="https://nude-project.com/cdn/shop/files/Basic_Jeans_Metal_Wash_front_800x.jpg?v=1756993265" alt="Basic Jeans Metal Wash">
+        <h3>Basic Jeans Metal Wash</h3>
+        <p>Bs. 430</p>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="producto" onclick="mostrarProducto('Basic Jeans Black Wash', 'https://nude-project.com/cdn/shop/files/BasicJeansBlackWash_front_800x.jpg?v=1756993176', 'https://nude-project.com/cdn/shop/files/BasicJeansBlackWash_back_800x.jpg?v=1758204469', 440)">
+        <img src="https://nude-project.com/cdn/shop/files/BasicJeansBlackWash_front_800x.jpg?v=1756993176" alt="Basic Jeans Black Wash">
+        <h3>Basic Jeans Black Wash</h3>
+        <p>Bs. 440</p>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="producto" onclick="mostrarProducto('Fantasy Long Pants Washed Green', 'https://nude-project.com/cdn/shop/files/BADEPA_FANTASY_LONGPANTS_WASTED_WASHED_GREEN_front_800x.jpg?v=1744383505', 'https://nude-project.com/cdn/shop/files/BADEPA_FANTASY_LONGPANTS_WASTED_WASHED_GREEN_back_800x.jpg?v=1744383503', 460)">
+        <img src="https://nude-project.com/cdn/shop/files/BADEPA_FANTASY_LONGPANTS_WASTED_WASHED_GREEN_front_800x.jpg?v=1744383505" alt="Fantasy Long Pants Washed Green">
+        <h3>Fantasy Long Pants Washed Green</h3>
+        <p>Bs. 460</p>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="producto" onclick="mostrarProducto('Old Baggy Denim Light Wash', 'https://nude-project.com/cdn/shop/files/OLDBAGGYDENIMLIGHTWASH_front_800x.jpg?v=1756991902', 'https://nude-project.com/cdn/shop/files/OLDBAGGYDENIMLIGHTWASH_back_800x.jpg?v=1758179178', 400)">
+        <img src="https://nude-project.com/cdn/shop/files/OLDBAGGYDENIMLIGHTWASH_front_800x.jpg?v=1756991902" alt="Old Baggy Denim Light Wash">
+        <h3>Old Baggy Denim Light Wash</h3>
+        <p>Bs. 400</p>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="producto" onclick="mostrarProducto('Old Baggy Denim Indigo', 'https://nude-project.com/cdn/shop/files/OLDBAGGYDENIMINDIGO_front_700x.jpg?v=1756991914', 'https://nude-project.com/cdn/shop/files/OLDBAGGYDENIMINDIGO_back_800x.jpg?v=1758189219', 420)">
+        <img src="https://nude-project.com/cdn/shop/files/OLDBAGGYDENIMINDIGO_front_700x.jpg?v=1756991914" alt="Old Baggy Denim Indigo">
+        <h3>Old Baggy Denim Indigo</h3>
+        <p>Bs. 420</p>
+      </div>
+
+      <!-- Producto 7 -->
+      <div class="producto" onclick="mostrarProducto('Old Baggy Denim Black', 'https://nude-project.com/cdn/shop/files/OLDBAGGYDENIMBLACK_front_800x.jpg?v=1756991905', 'https://nude-project.com/cdn/shop/files/OLDBAGGYDENIMBLACK_back_800x.jpg?v=1758207079', 430)">
+        <img src="https://nude-project.com/cdn/shop/files/OLDBAGGYDENIMBLACK_front_800x.jpg?v=1756991905" alt="Old Baggy Denim Black">
+        <h3>Old Baggy Denim Black</h3>
+        <p>Bs. 430</p>
+      </div>
+
+      <!-- Producto 8 -->
+      <div class="producto" onclick="mostrarProducto('Old Baggy Denim Shorts Black', 'https://nude-project.com/cdn/shop/files/OLD_BAGGY_DENIM_SHORTS_BLACK_back_800x.jpg?v=1744383384', 'https://nude-project.com/cdn/shop/files/OLD_BAGGY_DENIM_SHORTS_BLACK_front_800x.jpg?v=1750870008', 370)">
+        <img src="https://nude-project.com/cdn/shop/files/OLD_BAGGY_DENIM_SHORTS_BLACK_back_800x.jpg?v=1744383384" alt="Old Baggy Denim Shorts Black">
+        <h3>Old Baggy Denim Shorts Black</h3>
+        <p>Bs. 370</p>
+      </div>
+
+      <!-- Producto 9 -->
+      <div class="producto" onclick="mostrarProducto('Washed Denim Jeans', 'https://nude-project.com/cdn/shop/files/2_27f6907a-0735-477b-b0d5-c89e65600d35_800x.jpg?v=1744383585', 'https://nude-project.com/cdn/shop/files/1_e091d69c-a154-4c41-9b3e-9bf2e847d4bf_800x.jpg?v=1751460452', 450)">
+        <img src="https://nude-project.com/cdn/shop/files/2_27f6907a-0735-477b-b0d5-c89e65600d35_800x.jpg?v=1744383585" alt="Washed Denim Jeans">
+        <h3>Washed Denim Jeans</h3>
+        <p>Bs. 450</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODAL DE PRODUCTO ===== -->
+  <div id="modalProducto" class="modal">
+    <div class="modal-content">
+      <span class="cerrar">&times;</span>
+
+      <div class="modal-body">
+        <div class="modal-imagen">
+          <img id="modalImg" src="" alt="Producto (frontal)" class="imagen-frontal">
+          <img id="modalImgBack" src="" alt="Producto (trasero)" class="imagen-trasera">
+        </div>
+
+        <div class="modal-info">
+          <h2 id="modalNombre"></h2>
+          <p class="precio" id="modalPrecio"></p>
+
+          <label for="talla" class="talla-label">Selecciona tu talla:</label>
+          <select id="talla" class="talla-select">
+            <option value="">-- Selecciona --</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+
+          <label for="cantidad" class="cantidad-label">Cantidad:</label>
+          <input type="number" id="cantidad" class="cantidad-input" min="1" value="1">
+
+          <button class="btn-carrito">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PANEL DEL CARRITO ===== -->
+  <div id="overlayCarrito" class="overlay-carrito"></div>
+
+  <div id="carritoPanel" class="carrito-panel">
+    <div class="carrito-header">
+      <h2>🛒 Tu Carrito</h2>
+      <span id="cerrarCarrito" class="cerrar-carrito">&times;</span>
+    </div>
+
+    <div id="carritoItems" class="carrito-items">
+      <p class="carrito-vacio">Tu carrito está vacío.</p>
+    </div>
+
+    <div class="carrito-footer">
+      <p class="total">Total: <span id="carritoTotal">Bs. 0</span></p>
+      <button id="btnPagar" class="btn-pagar">Ir a pagar</button>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-contenedor">
+
+    <!-- Información de contacto -->
+    <div class="footer-contacto">
+      <h3>📍 Contáctanos</h3>
+      <p><strong>Dirección:</strong> Calle Moda 123, Santa Cruz - Bolivia</p>
+      <p><strong>Teléfono:</strong> +591 700-12345</p>
+      <p><strong>Correo:</strong> contacto@chamoys.shop</p>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="footer-redes">
+      <h3>🌐 Síguenos</h3>
+      <div class="redes-iconos">
+        <a href="https://www.instagram.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046127.png" alt="TikTok">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footer-derechos">
+    &copy; 2025 CHAMOYS SHOP - Todos los derechos reservados
+  </p>
+</footer>
+</body>
+</html>

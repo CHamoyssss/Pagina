@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHAMOYS SHOP - Mujeres</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js" defer></script>
+  <script src="buscador.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body data-page="mujeres">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="logo">CHAMOYS SHOP</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+
+      <li class="dropdown">
+        <a href="hombres.html">Hombres</a>
+        <ul class="submenu">
+          <li><a href="camisetashombres.html">Camisetas</a></li>
+          <li><a href="pantaloneshombres.html">Pantalones</a></li>
+          <li><a href="jeanshombres.html">Jeans</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="mujeres.html">Mujeres</a>
+        <ul class="submenu">
+          <li><a href="camisetasmujeres.html">Tops|Camisetas</a></li>
+          <li><a href="pantalonesmujeres.html">Pantalones</a></li>
+          <li><a href="jeansmujeres.html">Jeans</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Buscar ropa..." autocomplete="off" />
+     
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+
+    <div class="icono-carrito" id="iconoCarrito">
+      🛒 <span id="contadorCarrito">0</span>
+    </div>
+  </nav>
+
+  <!-- ===== SECCIÓN CAMISETAS MUJER ===== -->
+  <section class="seccion-categoria fondo-camisetas">
+    <div class="bloque-imagen">
+      <img src="https://nude-project.com/cdn/shop/files/NUDEPROJECT_LEMARAIS3432_800x.webp?v=1759317409" alt="Camisetas Mujer">
+      <div class="bloque-texto">
+        <h2>Tops y Camisetas</h2>
+        <p>Descubre estilos únicos para cada ocasión.</p>
+        <a href="camisetasmujeres.html" class="btn-categoria">Ver colección</a>
+      </div>
+    </div>
+
+    <div class="bloque-productos-grandes">
+      <div class="producto-grande" onclick="mostrarProducto('Julieta Tee','https://nude-project.com/cdn/shop/files/JULIETA_Tee_1_800x.jpg?v=1756980013','https://nude-project.com/cdn/shop/files/JULIETA_Tee_2_800x.jpg?v=1757334843',330)">
+        <img src="https://nude-project.com/cdn/shop/files/JULIETA_Tee_1_800x.jpg?v=1756980013" alt="">
+        <p>Julieta Tee</p>
+      </div>
+
+      <div class="producto-grande" onclick="mostrarProducto('Logo Top Black','https://nude-project.com/cdn/shop/files/LOGOTOPBLACK_front_76c35ced-7254-45d9-a9d8-e32b01579ec2_800x.jpg?v=1744383394','https://nude-project.com/cdn/shop/files/LOGOTOPBLACK_back_800x.jpg?v=1744383394',250)">
+        <img src="https://nude-project.com/cdn/shop/files/LOGOTOPBLACK_front_76c35ced-7254-45d9-a9d8-e32b01579ec2_800x.jpg?v=1744383394" alt="">
+        <p>Logo Top Black</p>
+      </div>
+
+      <div class="producto-grande" onclick="mostrarProducto('Metal Cherry Tee Grey','https://nude-project.com/cdn/shop/files/MEtal_cherry_tee_grey_front_800x.jpg?v=1754916147','https://nude-project.com/cdn/shop/files/juicy_cherry_tee_back_800x.jpg?v=1754919069',310)">
+        <img src="https://nude-project.com/cdn/shop/files/MEtal_cherry_tee_grey_front_800x.jpg?v=1754916147" alt="">
+        <p>Metal Cherry Tee Grey</p>
+      </div>
+
+      <div class="producto-grande" onclick="mostrarProducto('Bassa Top White','https://nude-project.com/cdn/shop/files/Bassa_Top_White_front_800x.jpg?v=1754387881','https://nude-project.com/cdn/shop/files/Bassa_Top_White_back_800x.jpg?v=1754387882',270)">
+        <img src="https://nude-project.com/cdn/shop/files/Bassa_Top_White_front_800x.jpg?v=1754387881" alt="">
+        <p>Bassa Top White</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN JEANS MUJER ===== -->
+  <section class="seccion-categoria fondo-jeans invertido">
+    <div class="bloque-imagen">
+      <img src="https://nude-project.com/cdn/shop/files/NUDEPROJECT_NEWINJULY0602_800x.webp?v=1756731704" alt="Jeans Mujer">
+      <div class="bloque-texto">
+        <h2>Jeans</h2>
+        <p>Denim moderno con detalles femeninos.</p>
+        <a href="jeansmujeres.html" class="btn-categoria">Ver colección</a>
+      </div>
+    </div>
+    <div class="bloque-productos-grandes">
+      <div class="producto-grande" onclick="mostrarProducto('Woman Badepa Blue','https://nude-project.com/cdn/shop/files/WomanBadepaBlue_front_800x.jpg?v=1755508635','https://nude-project.com/cdn/shop/files/WomanBadepaBlue_back_800x.jpg?v=1759909652',330)">
+        <img src="https://nude-project.com/cdn/shop/files/WomanBadepaBlue_front_800x.jpg?v=1755508635" alt="">
+        <p>Woman Badepa Blue</p>
+      </div>
+
+      <div class="producto-grande" onclick="mostrarProducto('Bootcut Bufalo Pants Indigo','https://nude-project.com/cdn/shop/files/BOOTCUT_BUFALO_PANTS_INDIGO_front_800x.jpg?v=1756906970','https://nude-project.com/cdn/shop/files/BOOTCUT_BUFALO_PANTS_INDIGO_back_800x.jpg?v=1757323332',360)">
+        <img src="https://nude-project.com/cdn/shop/files/BOOTCUT_BUFALO_PANTS_INDIGO_front_800x.jpg?v=1756906970" alt="">
+        <p>Bootcut Bufalo Pants Indigo</p>
+      </div>
+
+      <div class="producto-grande" onclick="mostrarProducto('Flowers Basic Denim Shorts','https://nude-project.com/cdn/shop/files/FLOWERS_BASIC_DENIM_SHORTS_front_800x.jpg?v=1745922551','https://nude-project.com/cdn/shop/files/FLOWERS_BASIC_DENIM_SHORTS_back_800x.jpg?v=1748075035',280)">
+        <img src="https://nude-project.com/cdn/shop/files/FLOWERS_BASIC_DENIM_SHORTS_front_800x.jpg?v=1745922551" alt="">
+        <p>Flowers Basic Denim Shorts</p>
+      </div>
+
+      <div class="producto-grande" onclick="mostrarProducto('Old Baggy Flower Embossed','https://nude-project.com/cdn/shop/files/OLD_BAGGY_FLOWER_EMBOSSED6_6c57eeb2-f5a7-4a69-b007-63a64bd6bf21_800x.jpg?v=1750852223','https://nude-project.com/cdn/shop/files/OLD_BAGGY_FLOWER_EMBOSSED7_800x.jpg?v=1750852223',350)">
+        <img src="https://nude-project.com/cdn/shop/files/OLD_BAGGY_FLOWER_EMBOSSED6_6c57eeb2-f5a7-4a69-b007-63a64bd6bf21_800x.jpg?v=1750852223" alt="">
+        <p>Old Baggy Flower Embossed</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN PANTALONES MUJER ===== -->
+  <section class="seccion-categoria fondo-pantalones">
+    <div class="bloque-imagen">
+      <img src="https://nude-project.com/cdn/shop/files/NP_GARDENINCLUB4688_1ad98f1d-3cdd-4f85-9454-bbd1fd4118d8_800x.webp?v=1759909176" alt="Pantalones Mujer">
+      <div class="bloque-texto">
+        <h2>Pantalones</h2>
+        <p>Comodidad y estilo para cada momento del día.</p>
+        <a href="pantalonesmujeres.html" class="btn-categoria">Ver colección</a>
+      </div>
+    </div>
+
+    <div class="bloque-productos-grandes">
+      <div class="producto-grande" onclick="mostrarProducto('Lebrel Legging Black','https://nude-project.com/cdn/shop/files/Lebrel_Legging_Black_1_700x.jpg?v=1756995733','https://nude-project.com/cdn/shop/files/Lebrel_Legging_Black_2_800x.jpg?v=1757318732',290)">
+        <img src="https://nude-project.com/cdn/shop/files/Lebrel_Legging_Black_1_700x.jpg?v=1756995733" alt="">
+        <p>Lebrel Legging Black</p>
+      </div>
+
+      <div class="producto-grande" onclick="mostrarProducto('Essentials Pant Brown','https://nude-project.com/cdn/shop/files/ESSENTIALS_PANT_BROWN_front_800x.jpg?v=1756739600','https://nude-project.com/cdn/shop/files/ESSENTIALS_PANT_BROWN_BACK_800x.jpg?v=1756739600',310)">
+        <img src="https://nude-project.com/cdn/shop/files/ESSENTIALS_PANT_BROWN_front_800x.jpg?v=1756739600" alt="">
+        <p>Essentials Pant Brown</p>
+      </div>
+
+      <div class="producto-grande" onclick="mostrarProducto('Essentials Sweatpants Grey','https://nude-project.com/cdn/shop/files/ESSENTIALS_SWEATPANTS_GREY_MELANGE_front_6c9d9430-f952-4404-be5b-2b10cd3d40b7_800x.jpg?v=1756309001','https://nude-project.com/cdn/shop/files/ESSENTIALS_SWEATPANTS_GREY_MELANGE_back_3f5234fa-ae16-4162-abea-4c0d94e874de_800x.jpg?v=1756309002',320)">
+        <img src="https://nude-project.com/cdn/shop/files/ESSENTIALS_SWEATPANTS_GREY_MELANGE_front_6c9d9430-f952-4404-be5b-2b10cd3d40b7_800x.jpg?v=1756309001" alt="">
+        <p>Essentials Sweatpants Grey</p>
+      </div>
+
+      <div class="producto-grande" onclick="mostrarProducto('City Carpenter Long Pants','https://nude-project.com/cdn/shop/files/CITY_CARPENTER_LONG_PANTS_800x.jpg?v=1755776637','https://nude-project.com/cdn/shop/files/CITY_CARPENTER_LONG_PANTS_back_800x.jpg?v=1755776638',330)">
+        <img src="https://nude-project.com/cdn/shop/files/CITY_CARPENTER_LONG_PANTS_800x.jpg?v=1755776637" alt="">
+        <p>City Carpenter Long Pants</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODAL PRODUCTO ===== -->
+  <div id="modalProducto" class="modal">
+    <div class="modal-content">
+      <span class="cerrar">&times;</span>
+      <div class="modal-body">
+        <div class="modal-imagen">
+          <img id="modalImg" src="" alt="Producto (frontal)" class="imagen-frontal">
+          <img id="modalImgBack" src="" alt="Producto (trasera)" class="imagen-trasera">
+        </div>
+
+        <div class="modal-info">
+          <h2 id="modalNombre"></h2>
+          <p class="precio" id="modalPrecio"></p>
+
+          <label for="talla" class="talla-label">Selecciona tu talla:</label>
+          <select id="talla" class="talla-select">
+            <option value="">-- Selecciona --</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+
+          <label for="cantidad" class="cantidad-label">Cantidad:</label>
+          <input type="number" id="cantidad" class="cantidad-input" min="1" value="1">
+
+          <button class="btn-carrito">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PANEL DE CARRITO ===== -->
+  <div id="overlayCarrito" class="overlay-carrito"></div>
+  <div id="carritoPanel" class="carrito-panel">
+    <div class="carrito-header">
+      <h2>🛒 Tu Carrito</h2>
+      <span id="cerrarCarrito" class="cerrar-carrito">&times;</span>
+    </div>
+    <div id="carritoItems" class="carrito-items">
+      <p class="carrito-vacio">Tu carrito está vacío.</p>
+    </div>
+    <div class="carrito-footer">
+      <p class="total">Total: <span id="carritoTotal">Bs. 0</span></p>
+      <button id="btnPagar" class="btn-pagar">Ir a pagar</button>
+    </div>
+  </div>
+
+ <!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-contenedor">
+
+    <!-- Información de contacto -->
+    <div class="footer-contacto">
+      <h3>📍 Contáctanos</h3>
+      <p><strong>Dirección:</strong> Calle Moda 123, Santa Cruz - Bolivia</p>
+      <p><strong>Teléfono:</strong> +591 700-12345</p>
+      <p><strong>Correo:</strong> contacto@chamoys.shop</p>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="footer-redes">
+      <h3>🌐 Síguenos</h3>
+      <div class="redes-iconos">
+        <a href="https://www.instagram.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046127.png" alt="TikTok">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footer-derechos">
+    &copy; 2025 CHAMOYS SHOP - Todos los derechos reservados
+  </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camisetas para Hombres - Página 2 | CHAMOYS SHOP</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="logo">CHAMOYS SHOP</div>
+
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+
+      <li class="dropdown">
+        <a href="hombres.html">Hombres</a>
+        <ul class="submenu">
+          <li><a href="camisetashombres.html">Camisetas</a></li>
+          <li><a href="pantaloneshombres.html">Pantalones</a></li>
+          <li><a href="jeanshombres.html">Jeans</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="mujeres.html">Mujeres</a>
+        <ul class="submenu">
+          <li><a href="camisetasmujeres.html">Tops|Camisetas</a></li>
+          <li><a href="pantalonesmujeres.html">Pantalones</a></li>
+          <li><a href="jeansmujeres.html">Jeans</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Buscar ropa..." autocomplete="off" />
+
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+
+    <div class="icono-carrito" id="iconoCarrito">
+      🛒 <span id="contadorCarrito">0</span>
+    </div>
+  </nav>
+
+  <!-- ===== CATÁLOGO DE CAMISETAS (PÁGINA 2) ===== -->
+  <section class="productos">
+    <h2>Camisetas para Hombres</h2>
+    <div class="catalogo">
+      
+      <!-- Producto 1 -->
+      <div class="producto" onclick="mostrarProducto('Dreamscape Tee White', 'https://nude-project.com/cdn/shop/files/5_81e812b4-a530-442d-8e60-ea91d019faf3_800x.jpg?v=1760099711', 'https://nude-project.com/cdn/shop/files/6_0f415c36-80c2-42a6-9ad9-c78441f92527_800x.jpg?v=1760099711', 310)">
+        <img src="https://nude-project.com/cdn/shop/files/5_81e812b4-a530-442d-8e60-ea91d019faf3_800x.jpg?v=1760099711" alt="Dreamscape Tee White">
+        <h3>Dreamscape Tee White</h3>
+        <p>Bs. 310</p>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="producto" onclick="mostrarProducto('Casanova Tee White', 'https://nude-project.com/cdn/shop/files/CASSANOVA_TEE_WHITE_WHITE_700x.jpg?v=1756984443', 'https://nude-project.com/cdn/shop/files/CASSANOVA_TEE_WHITE_WHITE_FRONT_800x.jpg?v=1757439394', 320)">
+        <img src="https://nude-project.com/cdn/shop/files/CASSANOVA_TEE_WHITE_WHITE_700x.jpg?v=1756984443" alt="Casanova Tee White">
+        <h3>Casanova Tee White</h3>
+        <p>Bs. 320</p>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="producto" onclick="mostrarProducto('Casanova Tee Navy', 'https://nude-project.com/cdn/shop/files/CASSANOVATEENAVY_800x.jpg?v=1756984577', 'https://nude-project.com/cdn/shop/files/CASSANOVA_TEE_NAVY_FRONT_800x.jpg?v=1757317576', 320)">
+        <img src="https://nude-project.com/cdn/shop/files/CASSANOVATEENAVY_800x.jpg?v=1756984577" alt="Casanova Tee Navy">
+        <h3>Casanova Tee Navy</h3>
+        <p>Bs. 320</p>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="producto" onclick="mostrarProducto('Margarita Tee White', 'https://nude-project.com/cdn/shop/files/MargaritaTeeWhite_329e23e1-b9bf-4455-93ee-47a242b8a0f1_800x.jpg?v=1757001347', 'https://nude-project.com/cdn/shop/files/MargaritaFlowerNavy_front_800x.jpg?v=1757320653', 300)">
+        <img src="https://nude-project.com/cdn/shop/files/MargaritaTeeWhite_329e23e1-b9bf-4455-93ee-47a242b8a0f1_800x.jpg?v=1757001347" alt="Margarita Tee White">
+        <h3>Margarita Tee White</h3>
+        <p>Bs. 300</p>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="producto" onclick="mostrarProducto('Play With Logo Tee Deep Ultramarine', 'https://nude-project.com/cdn/shop/files/PlayWithLogoTeeDeepUltramarine_back_800x.png?v=1757436633', 'https://nude-project.com/cdn/shop/files/PlayWithLogoTeeDeepUltramarine_front_800x.jpg?v=1757437114', 310)">
+        <img src="https://nude-project.com/cdn/shop/files/PlayWithLogoTeeDeepUltramarine_back_800x.png?v=1757436633" alt="Play With Logo Tee Deep Ultramarine">
+        <h3>Play With Logo Tee Deep Ultramarine</h3>
+        <p>Bs. 310</p>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="producto" onclick="mostrarProducto('Motto Tee Washed Black', 'https://nude-project.com/cdn/shop/files/MOTTO_TEE_WASHED_BLACK_back_800x.jpg?v=1756283669', 'https://nude-project.com/cdn/shop/files/MOTTO_TEE_WASHED_BLACK_front_fe81f419-62ba-4090-9f2d-768bcb607a64_700x.jpg?v=1756283670', 305)">
+        <img src="https://nude-project.com/cdn/shop/files/MOTTO_TEE_WASHED_BLACK_back_800x.jpg?v=1756283669" alt="Motto Tee Washed Black">
+        <h3>Motto Tee Washed Black</h3>
+        <p>Bs. 305</p>
+      </div>
+
+      <!-- Producto 7 -->
+      <div class="producto" onclick="mostrarProducto('Global Tee Grey Melange', 'https://nude-project.com/cdn/shop/files/GLOBAL_GREY_MELANGE_700x.jpg?v=1756314983', 'https://nude-project.com/cdn/shop/files/GREY_MELANGE_FRONT_800x.jpg?v=1756314984', 310)">
+        <img src="https://nude-project.com/cdn/shop/files/GLOBAL_GREY_MELANGE_700x.jpg?v=1756314983" alt="Global Tee Grey Melange">
+        <h3>Global Tee Grey Melange</h3>
+        <p>Bs. 310</p>
+      </div>
+
+      <!-- Producto 8 -->
+      <div class="producto" onclick="mostrarProducto('Global Soon Tee Ash', 'https://nude-project.com/cdn/shop/files/GlobalSoonTeeAsh_back_800x.jpg?v=1756314978', 'https://nude-project.com/cdn/shop/files/GLOBALLYTEEASH_front_800x.jpg?v=1756314980', 310)">
+        <img src="https://nude-project.com/cdn/shop/files/GlobalSoonTeeAsh_back_800x.jpg?v=1756314978" alt="Global Soon Tee Ash">
+        <h3>Global Soon Tee Ash</h3>
+        <p>Bs. 310</p>
+      </div>
+
+    </div>
+
+    </div> <!-- cierre del catálogo -->
+</section> <!-- 🔹 cierre del bloque productos -->
+
+<!-- ✅ PAGINACIÓN (ahora fuera del cuadro) -->
+<div class="paginacion">
+  <a href="camisetashombres.html" class="pagina">1</a>
+  <span class="actual">2</span>
+</div>
+  <!-- ===== MODAL DE PRODUCTO ===== -->
+  <div id="modalProducto" class="modal">
+    <div class="modal-content">
+      <span class="cerrar">&times;</span>
+
+      <div class="modal-body">
+        <div class="modal-imagen">
+          <img id="modalImg" src="" alt="Producto (frontal)" class="imagen-frontal">
+          <img id="modalImgBack" src="" alt="Producto (trasero)" class="imagen-trasera">
+        </div>
+
+        <div class="modal-info">
+          <h2 id="modalNombre"></h2>
+          <p class="precio" id="modalPrecio"></p>
+
+          <label for="talla" class="talla-label">Selecciona tu talla:</label>
+          <select id="talla" class="talla-select">
+            <option value="">-- Selecciona --</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+
+          <label for="cantidad" class="cantidad-label">Cantidad:</label>
+          <input type="number" id="cantidad" class="cantidad-input" min="1" value="1">
+
+          <button class="btn-carrito">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== OVERLAY Y PANEL DEL CARRITO ===== -->
+  <div id="overlayCarrito" class="overlay-carrito"></div>
+
+  <div id="carritoPanel" class="carrito-panel">
+    <div class="carrito-header">
+      <h2>🛒 Tu Carrito</h2>
+      <span id="cerrarCarrito" class="cerrar-carrito">&times;</span>
+    </div>
+
+    <div id="carritoItems" class="carrito-items">
+      <p class="carrito-vacio">Tu carrito está vacío.</p>
+    </div>
+
+    <div class="carrito-footer">
+      <p class="total">Total: <span id="carritoTotal">Bs. 0</span></p>
+      <button id="btnPagar" class="btn-pagar">Ir a pagar</button>
+    </div>
+  </div>
+
+ <!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-contenedor">
+
+    <!-- Información de contacto -->
+    <div class="footer-contacto">
+      <h3>📍 Contáctanos</h3>
+      <p><strong>Dirección:</strong> Calle Moda 123, Santa Cruz - Bolivia</p>
+      <p><strong>Teléfono:</strong> +591 700-12345</p>
+      <p><strong>Correo:</strong> contacto@chamoys.shop</p>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="footer-redes">
+      <h3>🌐 Síguenos</h3>
+      <div class="redes-iconos">
+        <a href="https://www.instagram.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046127.png" alt="TikTok">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footer-derechos">
+    &copy; 2025 CHAMOYS SHOP - Todos los derechos reservados
+  </p>
+</footer>
+</body>
+</html>

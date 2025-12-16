@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pago - CHAMOYS SHOP</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="logo">CHAMOYS SHOP</div>
+
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+
+      <li class="dropdown">
+        <a href="hombres.html">Hombres</a>
+        <ul class="submenu">
+          <li><a href="camisetashombres.html">Tops|Camisetas</a></li>
+          <li><a href="pantaloneshombres.html">Pantalones</a></li>
+          <li><a href="jeanshombres.html">Jeans</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="mujeres.html">Mujeres</a>
+        <ul class="submenu">
+          <li><a href="camisetasmujeres.html">Tops|Camisetas</a></li>
+          <li><a href="pantalonesmujeres.html">Pantalones</a></li>
+          <li><a href="jeansmujeres.html">Jeans</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Buscar ropa..." autocomplete="off" />
+      
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+
+    <div class="icono-carrito" id="iconoCarrito">
+      🛒 <span id="contadorCarrito">0</span>
+    </div>
+  </nav>
+
+  <!-- ===== SECCIÓN PAGO ===== -->
+  <section class="pago">
+    <h2>Finalizar Compra</h2>
+    <p class="intro-text">Revisa los productos de tu carrito y completa tus datos para finalizar tu pedido.</p>
+
+    <div class="pago-contenedor">
+      <!-- Carrito Resumen -->
+      <div class="resumen-carrito">
+        <h3>Tu pedido</h3>
+        <div id="resumenProductos"></div>
+        <p class="total-pago">Total: <span id="totalPago">Bs. 0</span></p>
+      </div>
+
+      <!-- Formulario de Pago -->
+      <form class="formulario-pago" id="formPago">
+        <h3>Datos de facturación</h3>
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" required placeholder="Tu nombre">
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" required placeholder="tuemail@ejemplo.com">
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" required placeholder="Ej. Calle Moda 123">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" required placeholder="+591 70000000">
+
+        <label for="metodoPago">Método de pago:</label>
+        <select id="metodoPago" required>
+          <option value="">-- Selecciona --</option>
+          <option value="tarjeta">Tarjeta</option>
+          <option value="transferencia">Transferencia</option>
+          <option value="efectivo">Efectivo</option>
+        </select>
+
+        <button type="submit" class="btn-confirmar">Confirmar pago</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== MODAL DE PRODUCTO ===== -->
+  <div id="modalProducto" class="modal">
+    <div class="modal-content">
+      <span class="cerrar">&times;</span>
+      <div class="modal-body">
+        <div class="modal-imagen">
+          <img id="modalImg" src="" alt="Producto (frontal)" class="imagen-frontal">
+          <img id="modalImgBack" src="" alt="Producto (trasero)" class="imagen-trasera">
+        </div>
+
+        <div class="modal-info">
+          <h2 id="modalNombre"></h2>
+          <p class="precio" id="modalPrecio"></p>
+
+          <label for="talla" class="talla-label">Selecciona tu talla:</label>
+          <select id="talla" class="talla-select">
+            <option value="">-- Selecciona --</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+
+          <label for="cantidad" class="cantidad-label">Cantidad:</label>
+          <input type="number" id="cantidad" class="cantidad-input" min="1" value="1">
+
+          <button class="btn-carrito">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== OVERLAY Y PANEL DEL CARRITO ===== -->
+  <div id="overlayCarrito" class="overlay-carrito"></div>
+
+  <div id="carritoPanel" class="carrito-panel">
+    <div class="carrito-header">
+      <h2>🛒 Tu Carrito</h2>
+      <span id="cerrarCarrito" class="cerrar-carrito">&times;</span>
+    </div>
+
+    <div id="carritoItems" class="carrito-items">
+      <p class="carrito-vacio">Tu carrito está vacío.</p>
+    </div>
+
+    <div class="carrito-footer">
+      <p class="total">Total: <span id="carritoTotal">Bs. 0</span></p>
+      <button id="btnPagar" class="btn-pagar">Ir a pagar</button>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-contenedor">
+
+    <!-- Información de contacto -->
+    <div class="footer-contacto">
+      <h3>📍 Contáctanos</h3>
+      <p><strong>Dirección:</strong> Calle Moda 123, Santa Cruz - Bolivia</p>
+      <p><strong>Teléfono:</strong> +591 700-12345</p>
+      <p><strong>Correo:</strong> contacto@chamoys.shop</p>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="footer-redes">
+      <h3>🌐 Síguenos</h3>
+      <div class="redes-iconos">
+        <a href="https://www.instagram.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046127.png" alt="TikTok">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footer-derechos">
+    &copy; 2025 CHAMOYS SHOP - Todos los derechos reservados
+  </p>
+</footer>
+
+  <!-- ===== SCRIPT DE PAGO ===== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const resumenProductos = document.getElementById("resumenProductos");
+      const totalPago = document.getElementById("totalPago");
+
+      const carrito = JSON.parse(localStorage.getItem("carritoChamoys")) || [];
+
+      if (carrito.length === 0) {
+        resumenProductos.innerHTML = "<p>Tu carrito está vacío.</p>";
+      } else {
+        let total = 0;
+        carrito.forEach((prod) => {
+          const div = document.createElement("div");
+          div.classList.add("item-resumen");
+          div.innerHTML = `
+            <img src="${prod.imagen}" alt="${prod.nombre}">
+            <div>
+              <h4>${prod.nombre}</h4>
+              <p>Talla: ${prod.talla}</p>
+              <p>Cantidad: ${prod.cantidad}</p>
+              <p>Bs. ${(prod.precio * prod.cantidad).toFixed(2)}</p>
+            </div>
+          `;
+          resumenProductos.appendChild(div);
+          total += prod.precio * prod.cantidad;
+        });
+        totalPago.textContent = "Bs. " + total.toFixed(2);
+      }
+    });
+
+    // Confirmar pago simulado
+    document.getElementById("formPago").addEventListener("submit", (e) => {
+      e.preventDefault();
+      Swal.fire({
+        title: "¡Pago realizado con éxito! 🎉",
+        text: "Gracias por tu compra en CHAMOYS SHOP 🖤",
+        icon: "success",
+        confirmButtonColor: "#000",
+        confirmButtonText: "Aceptar"
+      }).then(() => {
+        localStorage.removeItem("carritoChamoys");
+        window.location.href = "index.html";
+      });
+    });
+  </script>
+
+</body>
+</html>

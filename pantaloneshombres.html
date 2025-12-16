@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pantalones para Hombres | CHAMOYS SHOP</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body data-page="pantalones">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="logo">CHAMOYS SHOP</div>
+
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+
+      <li class="dropdown">
+        <a href="hombres.html">Hombres</a>
+        <ul class="submenu">
+          <li><a href="camisetashombres.html">Camisetas</a></li>
+          <li><a href="pantaloneshombres.html">Pantalones</a></li>
+          <li><a href="jeanshombres.html">Jeans</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="mujeres.html">Mujeres</a>
+        <ul class="submenu">
+          <li><a href="camisetasmujeres.html">Tops|Camisetas</a></li>
+          <li><a href="pantalonesmujeres.html">Pantalones</a></li>
+          <li><a href="jeansmujeres.html">Jeans</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Buscar ropa..." autocomplete="off" />
+     
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+
+    <div class="icono-carrito" id="iconoCarrito">
+      🛒 <span id="contadorCarrito">0</span>
+    </div>
+  </nav>
+
+  <!-- ===== CATÁLOGO DE PANTALONES ===== -->
+  <section class="productos">
+    <h2>Pantalones para Hombres</h2>
+
+    <div class="catalogo">
+      
+      <!-- Producto 1 -->
+      <div class="producto" onclick="mostrarProducto('Carpenter Pants Single Knee Brown', 'https://nude-project.com/cdn/shop/files/CarpenterPantsSingleKneeBrown_front_1_800x.jpg?v=1755525692', 'https://nude-project.com/cdn/shop/files/CarpenterPantsSingleKneeBrown_back_800x.jpg?v=1755597827', 420)">
+        <img src="https://nude-project.com/cdn/shop/files/CarpenterPantsSingleKneeBrown_front_1_800x.jpg?v=1755525692" alt="Carpenter Pants Single Knee Brown">
+        <h3>Carpenter Pants Single Knee Brown</h3>
+        <p>Bs. 420</p>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="producto" onclick="mostrarProducto('City Carpenter Long Pants', 'https://nude-project.com/cdn/shop/files/CITY_CARPENTER_LONG_PANTS_800x.jpg?v=1755776637', 'https://nude-project.com/cdn/shop/files/CITY_CARPENTER_LONG_PANTS_back_800x.jpg?v=1755776638', 480)">
+        <img src="https://nude-project.com/cdn/shop/files/CITY_CARPENTER_LONG_PANTS_800x.jpg?v=1755776637" alt="City Carpenter Long Pants">
+        <h3>City Carpenter Long Pants</h3>
+        <p>Bs. 480</p>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="producto" onclick="mostrarProducto('Flap Chino Pants Navy', 'https://nude-project.com/cdn/shop/files/Flap_Chino_Pants_Navy_front_800x.jpg?v=1755509288', 'https://nude-project.com/cdn/shop/files/Flap_Chino_Pants_Navy_back_800x.jpg?v=1758643420', 460)">
+        <img src="https://nude-project.com/cdn/shop/files/Flap_Chino_Pants_Navy_front_800x.jpg?v=1755509288" alt="Flap Chino Pants Navy">
+        <h3>Flap Chino Pants Navy</h3>
+        <p>Bs. 460</p>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="producto" onclick="mostrarProducto('Flap Chino Pants Beige', 'https://nude-project.com/cdn/shop/files/FlapChinoPantsBeige_front_800x.jpg?v=1755509163', 'https://nude-project.com/cdn/shop/files/FlapChinoPantsBeige_back_800x.jpg?v=1755596166', 450)">
+        <img src="https://nude-project.com/cdn/shop/files/FlapChinoPantsBeige_front_800x.jpg?v=1755509163" alt="Flap Chino Pants Beige">
+        <h3>Flap Chino Pants Beige</h3>
+        <p>Bs. 450</p>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="producto" onclick="mostrarProducto('Tachi Velvet Carpenter Pants', 'https://nude-project.com/cdn/shop/files/TACHI_VELVET_CARPENTER_PANTS_front_800x.jpg?v=1756970219', 'https://nude-project.com/cdn/shop/files/TACHI_VELVET_CARPENTER_PANTS_back_800x.jpg?v=1757333787', 490)">
+        <img src="https://nude-project.com/cdn/shop/files/TACHI_VELVET_CARPENTER_PANTS_front_800x.jpg?v=1756970219" alt="Tachi Velvet Carpenter Pants">
+        <h3>Tachi Velvet Carpenter Pants</h3>
+        <p>Bs. 490</p>
+      </div>
+
+      <!-- Producto 7 -->
+      <div class="producto" onclick="mostrarProducto('Carpenter Pants Off-White', 'https://nude-project.com/cdn/shop/files/CARPENTERPANTSOFF-WHITEfront_c13127a7-3e56-4dad-a367-07c3d51b06b1_front_800x.jpg?v=1744301037', 'https://nude-project.com/cdn/shop/files/CARPENTERPANTSOFF-WHITEback_9e02c5d4-93ff-4fb7-86ad-1ebfcf1579c9_back_700x.jpg?v=1744301036', 470)">
+        <img src="https://nude-project.com/cdn/shop/files/CARPENTERPANTSOFF-WHITEfront_c13127a7-3e56-4dad-a367-07c3d51b06b1_front_800x.jpg?v=1744301037" alt="Carpenter Pants Off-White">
+        <h3>Carpenter Pants Off-White</h3>
+        <p>Bs. 470</p>
+      </div>
+
+      <!-- Producto 8 -->
+      <div class="producto" onclick="mostrarProducto('Army Cargo Pants Ash', 'https://nude-project.com/cdn/shop/files/ARMY_CARGO_PANTS_ASH_front_700x.jpg?v=1725615113', 'https://nude-project.com/cdn/shop/files/ARMY_CARGO_PANTS_ASH_back_800x.jpg?v=1725615088', 440)">
+        <img src="https://nude-project.com/cdn/shop/files/ARMY_CARGO_PANTS_ASH_front_700x.jpg?v=1725615113" alt="Army Cargo Pants Ash">
+        <h3>Army Cargo Pants Ash</h3>
+        <p>Bs. 440</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== MODAL DE PRODUCTO ===== -->
+  <div id="modalProducto" class="modal">
+    <div class="modal-content">
+      <span class="cerrar">&times;</span>
+      <div class="modal-body">
+        <div class="modal-imagen">
+          <img id="modalImg" src="" alt="Producto (frontal)" class="imagen-frontal">
+          <img id="modalImgBack" src="" alt="Producto (trasero)" class="imagen-trasera">
+        </div>
+        <div class="modal-info">
+          <h2 id="modalNombre"></h2>
+          <p class="precio" id="modalPrecio"></p>
+          <label for="talla" class="talla-label">Selecciona tu talla:</label>
+          <select id="talla" class="talla-select">
+            <option value="">-- Selecciona --</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+          <label for="cantidad" class="cantidad-label">Cantidad:</label>
+          <input type="number" id="cantidad" class="cantidad-input" min="1" value="1">
+          <button class="btn-carrito">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== OVERLAY Y PANEL DEL CARRITO ===== -->
+  <div id="overlayCarrito" class="overlay-carrito"></div>
+  <div id="carritoPanel" class="carrito-panel">
+    <div class="carrito-header">
+      <h2>🛒 Tu Carrito</h2>
+      <span id="cerrarCarrito" class="cerrar-carrito">&times;</span>
+    </div>
+    <div id="carritoItems" class="carrito-items">
+      <p class="carrito-vacio">Tu carrito está vacío.</p>
+    </div>
+    <div class="carrito-footer">
+      <p class="total">Total: <span id="carritoTotal">Bs. 0</span></p>
+      <button id="btnPagar" class="btn-pagar">Ir a pagar</button>
+    </div>
+  </div>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-contenedor">
+
+    <!-- Información de contacto -->
+    <div class="footer-contacto">
+      <h3>📍 Contáctanos</h3>
+      <p><strong>Dirección:</strong> Calle Moda 123, Santa Cruz - Bolivia</p>
+      <p><strong>Teléfono:</strong> +591 700-12345</p>
+      <p><strong>Correo:</strong> contacto@chamoys.shop</p>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="footer-redes">
+      <h3>🌐 Síguenos</h3>
+      <div class="redes-iconos">
+        <a href="https://www.instagram.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046127.png" alt="TikTok">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footer-derechos">
+    &copy; 2025 CHAMOYS SHOP - Todos los derechos reservados
+  </p>
+</footer>
+
+</body>
+</html>

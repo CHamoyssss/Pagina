@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHAMOYS SHOP</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js" defer></script>
+  <script src="buscador.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="logo">CHAMOYS SHOP</div>
+
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+
+      <li class="dropdown">
+        <a href="hombres.html">Hombres</a>
+        <ul class="submenu">
+          <li><a href="camisetashombres.html">Camisetas</a></li>
+          <li><a href="pantaloneshombres.html">Pantalones</a></li>
+          <li><a href="jeanshombres.html">Jeans</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="mujeres.html">Mujeres</a>
+        <ul class="submenu">
+          <li><a href="camisetasmujeres.html">Tops|Camisetas</a></li>
+          <li><a href="pantalonesmujeres.html">Pantalones</a></li>
+          <li><a href="jeansmujeres.html">Jeans</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Buscar ropa..." autocomplete="off" />
+      
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+
+    <!-- 🔹 ÍCONO DEL CARRITO -->
+    <div class="icono-carrito" id="iconoCarrito">
+      🛒 <span id="contadorCarrito">0</span>
+    </div>
+  </nav>
+
+  <!-- ===== BANNER PRINCIPAL ===== -->
+  <section class="banner">
+    <div class="banner-contenido">
+      <h1>Nueva Colección 2025</h1>
+      <p>Descubre las últimas tendencias en moda para todos los estilos.</p>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTOS DESTACADOS ===== -->
+  <section class="productos">
+    <h2>Productos Destacados</h2>
+    <button class="scroll-btn left" onclick="scrollLeftBtn('destacados')">&#10094;</button>
+    <div class="productos-container">
+      
+
+      <div class="productos-scroll" id="destacados">
+
+        <!-- Producto 1 -->
+    <div class="producto" onclick="mostrarProducto('Teddy Bear Tee Navy', 'https://nude-project.com/cdn/shop/files/TEDDY_BEAR_TEE_NAVY_front_f6bf8647-0a5b-4aa8-b871-600e2d5182dd_800x.jpg?v=1756285314', 'https://nude-project.com/cdn/shop/files/TEDDY_BEAR_TEE_NAVY_back_636292f1-115f-407d-a287-ab70d23ea700_800x.jpg?v=1756285312', 320)">
+      <img src="https://nude-project.com/cdn/shop/files/TEDDY_BEAR_TEE_NAVY_front_f6bf8647-0a5b-4aa8-b871-600e2d5182dd_800x.jpg?v=1756285314" alt="Teddy Bear Tee Navy">
+      <h3>Teddy Bear Tee Navy</h3>
+      <p>Bs. 320</p>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="producto" onclick="mostrarProducto('Fuck Normal Tee Ash', 'https://nude-project.com/cdn/shop/files/FUCK_NORMAL_TEE_ASH_front_800x.jpg?v=1756285517', 'https://nude-project.com/cdn/shop/files/FUCK_NORMAL_TEE_ASH_back_800x.jpg?v=1756285517', 310)">
+      <img src="https://nude-project.com/cdn/shop/files/FUCK_NORMAL_TEE_ASH_front_800x.jpg?v=1756285517" alt="Fuck Normal Tee Ash">
+      <h3>Fuck Normal Tee Ash</h3>
+      <p>Bs. 310</p>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="producto" onclick="mostrarProducto('Xoxo Tee Marshmallow', 'https://nude-project.com/cdn/shop/files/Xoxo_Tee_Marshmallow_back_800x.jpg?v=1756284093', 'https://nude-project.com/cdn/shop/files/Xoxo_Tee_Marshmallow_front_800x.jpg?v=1756284094', 300)">
+      <img src="https://nude-project.com/cdn/shop/files/Xoxo_Tee_Marshmallow_back_800x.jpg?v=1756284093" alt="Xoxo Tee Marshmallow">
+      <h3>Xoxo Tee Marshmallow</h3>
+      <p>Bs. 300</p>
+    </div>
+
+    <!-- Producto 4 -->
+    <div class="producto" onclick="mostrarProducto('Logo Top Marshmallow', 'https://nude-project.com/cdn/shop/files/LOGOTOPMARSH_front_800x.jpg?v=1744383393', 'https://nude-project.com/cdn/shop/files/LOGOTOPMARSH_back_800x.jpg?v=1744383393', 250)">
+      <img src="https://nude-project.com/cdn/shop/files/LOGOTOPMARSH_front_800x.jpg?v=1744383393" alt="Logo Top Marshmallow">
+      <h3>Logo Top Marshmallow</h3>
+      <p>Bs. 250</p>
+    </div>
+
+    <!-- Producto 5 -->
+    <div class="producto" onclick="mostrarProducto('Julieta Tee', 'https://nude-project.com/cdn/shop/files/JULIETA_Tee_1_800x.jpg?v=1756980013', 'https://nude-project.com/cdn/shop/files/JULIETA_Tee_2_800x.jpg?v=1757334843', 330)">
+      <img src="https://nude-project.com/cdn/shop/files/JULIETA_Tee_1_800x.jpg?v=1756980013" alt="Julieta Tee">
+      <h3>Julieta Tee</h3>
+      <p>Bs. 330</p>
+    </div>
+
+    <!-- Producto 6 -->
+    <div class="producto" onclick="mostrarProducto('Logo Top Black', 'https://nude-project.com/cdn/shop/files/LOGOTOPBLACK_front_76c35ced-7254-45d9-a9d8-e32b01579ec2_800x.jpg?v=1744383394', 'https://nude-project.com/cdn/shop/files/LOGOTOPBLACK_back_800x.jpg?v=1744383394', 250)">
+      <img src="https://nude-project.com/cdn/shop/files/LOGOTOPBLACK_front_76c35ced-7254-45d9-a9d8-e32b01579ec2_800x.jpg?v=1744383394" alt="Logo Top Black">
+      <h3>Logo Top Black</h3>
+      <p>Bs. 250</p>
+    </div>
+
+    <!-- Producto 7 -->
+    <div class="producto" onclick="mostrarProducto('Basic Jeans Light Wash', 'https://nude-project.com/cdn/shop/files/Basic_Jeans_Light_Wash_front_800x.jpg?v=1756992680', 'https://nude-project.com/cdn/shop/files/Basic_Jeans_Light_Wash_back_800x.jpg?v=1758100287', 420)">
+      <img src="https://nude-project.com/cdn/shop/files/Basic_Jeans_Light_Wash_front_800x.jpg?v=1756992680" alt="Basic Jeans Light Wash">
+      <h3>Basic Jeans Light Wash</h3>
+      <p>Bs. 420</p>
+    </div>
+
+    <!-- Producto 8 -->
+    <div class="producto" onclick="mostrarProducto('Raw Basic Denim Shorts', 'https://nude-project.com/cdn/shop/files/RAWBASICDENIMSHORTS_front_800x.jpg?v=1756971185', 'https://nude-project.com/cdn/shop/files/RAWBASICDENIMSHORTS_back_800x.jpg?v=1756971186', 360)">
+      <img src="https://nude-project.com/cdn/shop/files/RAWBASICDENIMSHORTS_front_800x.jpg?v=1756971185" alt="Raw Basic Denim Shorts">
+      <h3>Raw Basic Denim Shorts</h3>
+      <p>Bs. 360</p>
+    </div>
+
+    <!-- Producto 9 -->
+    <div class="producto" onclick="mostrarProducto('Basic Straight Jeans Fantasy Wash', 'https://nude-project.com/cdn/shop/files/BasicStraightJeansFantasyWash_1_800x.jpg?v=1757342094', 'https://nude-project.com/cdn/shop/files/Basic-StraightJeansFantasyWash2_800x.jpg?v=1757342094', 440)">
+      <img src="https://nude-project.com/cdn/shop/files/BasicStraightJeansFantasyWash_1_800x.jpg?v=1757342094" alt="Basic Straight Jeans Fantasy Wash">
+      <h3>Basic Straight Jeans Fantasy Wash</h3>
+      <p>Bs. 440</p>
+    </div>
+
+    <!-- Producto 10 -->
+    <div class="producto" onclick="mostrarProducto('Essentials Sweatpants Grey', 'https://nude-project.com/cdn/shop/files/ESSENTIALS_SWEATPANTS_GREY_MELANGE_front_6c9d9430-f952-4404-be5b-2b10cd3d40b7_800x.jpg?v=1756309001', 'https://nude-project.com/cdn/shop/files/ESSENTIALS_SWEATPANTS_GREY_MELANGE_back_3f5234fa-ae16-4162-abea-4c0d94e874de_800x.jpg?v=1756309002', 390)">
+      <img src="https://nude-project.com/cdn/shop/files/ESSENTIALS_SWEATPANTS_GREY_MELANGE_front_6c9d9430-f952-4404-be5b-2b10cd3d40b7_800x.jpg?v=1756309001" alt="Essentials Sweatpants Grey">
+      <h3>Essentials Sweatpants Grey</h3>
+      <p>Bs. 390</p>
+    </div>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRightBtn('destacados')">&#10095;</button>
+  </section>
+
+  <!-- ===== PRODUCTOS NUEVOS ===== -->
+<section class="productos">
+  <h2>Productos Nuevos</h2>
+  <button class="scroll-btn left" onclick="scrollLeftBtn('nuevos')">&#10094;</button>
+  <div class="productos-container">
+    
+
+    <div class="productos-scroll" id="nuevos">
+      <!-- Producto 1 -->
+      <div class="producto" onclick="mostrarProducto('City Carpenter Long Pants', 'https://nude-project.com/cdn/shop/files/CITY_CARPENTER_LONG_PANTS_800x.jpg?v=1755776637', 'https://nude-project.com/cdn/shop/files/CITY_CARPENTER_LONG_PANTS_back_800x.jpg?v=1755776638', 480)">
+        <img src="https://nude-project.com/cdn/shop/files/CITY_CARPENTER_LONG_PANTS_800x.jpg?v=1755776637" alt="City Carpenter Long Pants">
+        <h3>City Carpenter Long Pants</h3>
+        <p class="precio">Bs. 480</p>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="producto" onclick="mostrarProducto('Varsity Tee Marshmallow', 'https://nude-project.com/cdn/shop/files/VarsityTeeMarshmallow_front_800x.jpg?v=1759503883', 'https://nude-project.com/cdn/shop/files/VarsityTeeMarsh_BAck_800x.jpg?v=1759503883', 310)">
+        <img src="https://nude-project.com/cdn/shop/files/VarsityTeeMarshmallow_front_800x.jpg?v=1759503883" alt="Varsity Tee Marshmallow">
+        <h3>Varsity Tee Marshmallow</h3>
+        <p class="precio">Bs. 310</p>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="producto" onclick="mostrarProducto('Juicy Cherry Tee White', 'https://nude-project.com/cdn/shop/files/JUICY_CHERRY_TEE_WHITE_back_800x.jpg?v=1756284917', 'https://nude-project.com/cdn/shop/files/JUICY_CHERRY_TEE_WHITE_front_800x.jpg?v=1756284918', 290)">
+        <img src="https://nude-project.com/cdn/shop/files/JUICY_CHERRY_TEE_WHITE_back_800x.jpg?v=1756284917" alt="Juicy Cherry Tee White">
+        <h3>Juicy Cherry Tee White</h3>
+        <p class="precio">Bs. 290</p>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="producto" onclick="mostrarProducto('Gilda Tee Windward Blue', 'https://nude-project.com/cdn/shop/files/GILDA_TEE_WINDWARD_BLUE_back_800x.jpg?v=1756284532', 'https://nude-project.com/cdn/shop/files/GILDA_TEE_WINDWARD_BLUE_front_800x.jpg?v=1756284533', 305)">
+        <img src="https://nude-project.com/cdn/shop/files/GILDA_TEE_WINDWARD_BLUE_back_800x.jpg?v=1756284532" alt="Gilda Tee Windward Blue">
+        <h3>Gilda Tee Windward Blue</h3>
+        <p class="precio">Bs. 305</p>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="producto" onclick="mostrarProducto('Hot Top Navy', 'https://nude-project.com/cdn/shop/files/HOT_TOP_NAVY_front_700x.jpg?v=1744384326', 'https://nude-project.com/cdn/shop/files/6_c677ecc6-6053-4d0e-9fa7-86c000947812_back_800x.jpg?v=1744384326', 240)">
+        <img src="https://nude-project.com/cdn/shop/files/HOT_TOP_NAVY_front_700x.jpg?v=1744384326" alt="Hot Top Navy">
+        <h3>Hot Top Navy</h3>
+        <p class="precio">Bs. 240</p>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="producto" onclick="mostrarProducto('Liberté Top Navy', 'https://nude-project.com/cdn/shop/files/LIBERTETOPNAVYfront_a616e26a-3409-4da9-ae19-53e3ac79d804_front_800x.jpg?v=1744384326', 'https://nude-project.com/cdn/shop/files/LIBERTETOPNAVY_back_800x.jpg?v=1744384327', 250)">
+        <img src="https://nude-project.com/cdn/shop/files/LIBERTETOPNAVYfront_a616e26a-3409-4da9-ae19-53e3ac79d804_front_800x.jpg?v=1744384326" alt="Liberté Top Navy">
+        <h3>Liberté Top Navy</h3>
+        <p class="precio">Bs. 250</p>
+      </div>
+
+      <!-- Producto 7 -->
+      <div class="producto" onclick="mostrarProducto('Liberté Top White', 'https://nude-project.com/cdn/shop/files/LIBERTETOPWHITE_front_800x.jpg?v=1744384326', 'https://nude-project.com/cdn/shop/files/LIBERTETOPWHITE_back_800x.jpg?v=1744384326', 250)">
+        <img src="https://nude-project.com/cdn/shop/files/LIBERTETOPWHITE_front_800x.jpg?v=1744384326" alt="Liberté Top White">
+        <h3>Liberté Top White</h3>
+        <p class="precio">Bs. 250</p>
+      </div>
+
+      <!-- Producto 8 -->
+      <div class="producto" onclick="mostrarProducto('Flap Chino Pants Navy', 'https://nude-project.com/cdn/shop/files/Flap_Chino_Pants_Navy_front_800x.jpg?v=1755509288', 'https://nude-project.com/cdn/shop/files/Flap_Chino_Pants_Navy_back_800x.jpg?v=1758643420', 460)">
+        <img src="https://nude-project.com/cdn/shop/files/Flap_Chino_Pants_Navy_front_800x.jpg?v=1755509288" alt="Flap Chino Pants Navy">
+        <h3>Flap Chino Pants Navy</h3>
+        <p class="precio">Bs. 460</p>
+      </div>
+
+      <!-- Producto 9 -->
+      <div class="producto" onclick="mostrarProducto('Bootcut Búfalo Pants Indigo', 'https://nude-project.com/cdn/shop/files/BOOTCUT_BUFALO_PANTS_INDIGO_front_800x.jpg?v=1756906970', 'https://nude-project.com/cdn/shop/files/BOOTCUT_BUFALO_PANTS_INDIGO_back_800x.jpg?v=1757323332', 470)">
+        <img src="https://nude-project.com/cdn/shop/files/BOOTCUT_BUFALO_PANTS_INDIGO_front_800x.jpg?v=1756906970" alt="Bootcut Búfalo Pants Indigo">
+        <h3>Bootcut Búfalo Pants Indigo</h3>
+        <p class="precio">Bs. 470</p>
+      </div>
+    </div>
+  </div>
+  <button class="scroll-btn right" onclick="scrollRightBtn('nuevos')">&#10095;</button>
+</section>
+
+  <!-- ===== MODAL DE PRODUCTO ===== -->
+  <div id="modalProducto" class="modal">
+    <div class="modal-content">
+      <span class="cerrar">&times;</span>
+
+      <div class="modal-body">
+        <!-- 🔹 Imagen doble (frontal/trasera) -->
+        <div class="modal-imagen">
+          <img id="modalImg" src="" alt="Producto (frontal)" class="imagen-frontal">
+          <img id="modalImgBack" src="" alt="Producto (trasero)" class="imagen-trasera">
+        </div>
+
+        <!-- 🔹 Información -->
+        <div class="modal-info">
+          <h2 id="modalNombre"></h2>
+          <p class="precio" id="modalPrecio"></p>
+
+          <label for="talla" class="talla-label">Selecciona tu talla:</label>
+          <select id="talla" class="talla-select">
+            <option value="">-- Selecciona --</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+
+          <label for="cantidad" class="cantidad-label">Cantidad:</label>
+          <input type="number" id="cantidad" class="cantidad-input" min="1" value="1">
+
+          <button class="btn-carrito">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== OVERLAY Y PANEL DEL CARRITO ===== -->
+  <div id="overlayCarrito" class="overlay-carrito"></div>
+
+  <div id="carritoPanel" class="carrito-panel">
+    <div class="carrito-header">
+      <h2>🛒 Tu Carrito</h2>
+      <span id="cerrarCarrito" class="cerrar-carrito">&times;</span>
+    </div>
+
+    <div id="carritoItems" class="carrito-items">
+      <p class="carrito-vacio">Tu carrito está vacío.</p>
+    </div>
+
+    <div class="carrito-footer">
+      <p class="total">Total: <span id="carritoTotal">Bs. 0</span></p>
+      <button id="btnPagar" class="btn-pagar">Ir a pagar</button>
+    </div>
+  </div>
+
+ <!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-contenedor">
+
+    <!-- Información de contacto -->
+    <div class="footer-contacto">
+      <h3>📍 Contáctanos</h3>
+      <p><strong>Dirección:</strong> Calle Moda 123, Santa Cruz - Bolivia</p>
+      <p><strong>Teléfono:</strong> +591 700-12345</p>
+      <p><strong>Correo:</strong> contacto@chamoys.shop</p>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="footer-redes">
+      <h3>🌐 Síguenos</h3>
+      <div class="redes-iconos">
+        <a href="https://www.instagram.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046127.png" alt="TikTok">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="icono">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footer-derechos">
+    &copy; 2025 CHAMOYS SHOP - Todos los derechos reservados
+  </p>
+</footer>
+</body>
+</html>
